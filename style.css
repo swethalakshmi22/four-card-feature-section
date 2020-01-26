@@ -1,19 +1,18 @@
-body {
+body, html {
    margin: 0;
    padding: 0;
    box-sizing: border-box;
-   font: 15px 'Poppins',sans-serif;
-   background-color: whitesmoke;
+   font: 15px 'Poppins', sans-serif;
+   background-color: hsl(0, 0%, 98%);
 }
 
 .container {
    max-width: 1440px;
-   margin: 2rem 12rem 1rem 12rem;
+   margin: 0 auto;
    display: flex;
    flex-direction: column;
    align-items: center;
    background-color: hsl(0, 0%, 98%);
-   box-shadow: 0 0 15px 15px rgba(0, 0, 0, 0.089);
 }
 
 .top-text {
@@ -23,7 +22,7 @@ body {
    margin-top: 2rem;
 }
 
-.light { font-weight: 200;}
+.light { font-weight: 100;}
 
 .top-text h1 {
    margin-top: 0;
@@ -32,7 +31,10 @@ body {
 
 .top-text p { text-align: center; }
 
-img { float: right; }
+img { 
+   float: right;
+   margin-left: -0.5rem;
+   margin-bottom: -0.5rem }
 
 .grid1 { display: flex; }
 
@@ -42,8 +44,8 @@ img { float: right; }
 }
 
 .size {
-   width: 21rem;
-   height: 13rem;
+   width: 22rem;
+   height: 13.5rem;
 }
 
 .shadow { box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.089); }
@@ -81,8 +83,60 @@ img { float: right; }
 
 #orange { border-top: 4px solid hsl(34, 97%, 64%); }
 
+@media (max-width: 800px) {
+
+   .teambuilder img, .calculator img { margin-top: -1.3rem; }
+
+   .size {
+      width: 16.5rem;
+      height: 14rem;
+   }
+
+   .container { max-width: 800px; }
+
+   .text { padding: 0 1rem; }
+
+   .supervisor { 
+      margin-right: 1rem;
+      margin-top: 10rem;
+   }
+
+   .teambuilder{ margin-bottom: 3.5rem; }
+
+   .calculator { margin-left: 1rem;
+      margin-top: 10rem; }
+
+   .karma {margin-bottom: -0.2rem;}
+}
+
 @media (max-width: 375px) {
+  
+   .grid1 { 
+      display: block;
+      padding-left: 2rem;
+   }   
    
+   .supervisor { margin-bottom: 1.5rem; }
+
+   .teambuilder { margin-bottom: 1.5rem; }
+
+   .karma {
+      margin-bottom: 1.5rem;
+      padding-bottom: 1.5rem;
+   }
+
+   .calculator {
+      margin: 0;
+      margin-bottom: 2.5rem;
+   }
+   
+   .container { width: 375px;}
+   
+   .top-text { margin-bottom: -7rem;}
+
+   .top-text h1 { padding: 0 0.3rem;}
+
+   .top-text p { padding: 0 0.7rem; }
 }
 
 
